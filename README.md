@@ -15,3 +15,14 @@
 
 Great resources that dive deep into nodejs, streams and functional programming. The coolest thing about this material that they help you to understand deeper more advanced topics.
 
+## Memory Management
+
+What's going to happen if program reaches maximum limit of stack ?
+ If the maximum stack size has been reached, we have a stack overflow and the program receives a Segmentation Fault.
+ 
+What's going to happen if program requests a big (more then 128KB) memory allocation on heap ?
+ The heap is enlarged via the brk() system call (implementation) to make room for the requested block.
+ 
+What's the difference between Text and Data memory segments ?
+The data segment holds the contents for static variables initialized in source code and contaons all the the read/write data which is not 0-initialized.
+The text segment is read-only and stores all of your code in addition to tidbits like string literals.
